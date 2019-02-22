@@ -18,6 +18,21 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBGHJkbNnaIDLqcmaip6pWKqUCoqEkF4FA",
+            authDomain: "paralnd-25cf6.firebaseapp.com",
+            databaseURL: "https://paralnd-25cf6.firebaseio.com",
+            projectId: "paralnd-25cf6",
+            storageBucket: "paralnd-25cf6.appspot.com",
+            messagingSenderId: "471013716354"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="js/crud.js"></script>
 </head>
 
 <body>
@@ -25,8 +40,8 @@
         <form id="form-users" class="mt-3">
             <div class="row">
                 <div class="col-sm-3">
-                    <img src="img/no-image.png" class="img-fluid" />
-                    <input type="file" class="form-control-file border" hidden>
+                    <img src="img/no-image.png" id="photo" class="img-fluid" />
+                    <input type="file" class="form-control-file border" id="img-file" hidden>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
@@ -35,9 +50,7 @@
                         <button type="submit" class="float-right mt-3">Send</button>
                     </div>
                 </div>
-                
             </div>
-            
         </form>
     </div>
 </body>
